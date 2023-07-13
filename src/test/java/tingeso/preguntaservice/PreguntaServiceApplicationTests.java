@@ -1,10 +1,10 @@
-package tingeso.pep3;
+package tingeso.preguntaservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Pep3ApplicationTests {
+class PreguntaServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
