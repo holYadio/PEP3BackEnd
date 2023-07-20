@@ -51,4 +51,12 @@ public class PreguntaService {
         }
         return test;
     }
+
+    public Integer deleteByDificultad(String dificultad) {
+        List<Pregunta> preguntas = getPreguntaByDificultad(dificultad);
+        for (Pregunta pregunta: preguntas) {
+            repository.deleteById(pregunta.getId());
+        }
+        return preguntas.size();
+    }
 }

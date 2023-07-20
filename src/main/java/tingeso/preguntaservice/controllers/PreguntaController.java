@@ -44,4 +44,11 @@ public class PreguntaController {
             return ResponseEntity.noContent().build();
         return ResponseEntity.ok(newPregunta);
     }
+    @DeleteMapping("/dificultad/{dificultad}")
+    public ResponseEntity<Integer> deletePreguntaByDificultad(@PathVariable(value = "dificultad") String dificultad){
+        Integer cantidad = service.deleteByDificultad(dificultad);
+        if(cantidad == null)
+            return ResponseEntity.notFound().build();
+        return ResponseEntity.ok(cantidad);
+    }
 }

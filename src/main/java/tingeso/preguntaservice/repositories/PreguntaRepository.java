@@ -9,4 +9,6 @@ import java.util.List;
 @Repository
 public interface PreguntaRepository extends JpaRepository<Pregunta, Integer> {
     List<Pregunta> findByDificultad(String dificultad);
+
+    Integer deleteByDificultad(String dificultad);
 }
